@@ -1,0 +1,119 @@
+[-  Commands -][Admin File Manager]
+command=sudo pcmanfm
+name=Admin File Manager
+tooltip=
+
+[-  Commands -][Authentication Log Settings]
+command=doas covermyass
+name=Authentication Log Settings
+tooltip=
+
+[-  Commands -][Change MAC Address]
+command=sudo macchanger wlan0 -r\nsudo macchanger enp0s3 -r\nsudo macchanger eth0 -r\nsudo macchanger eth1 -r\nsudo macchanger lo -r
+name=Change MAC Address
+tooltip=
+
+[-  Commands -][Clear Cache]
+command=doas pacman -Sc\s
+name=Clear Cache
+tooltip=
+
+[-  Commands -][Clear Command History]
+command=history -c
+name=Clear Command History
+tooltip=
+
+[-  Commands -][Fix Corruption]
+command=doas pacman -Syu --overwrite "*" $(pacman  -Qnq)
+name=Fix Corruption
+tooltip=
+
+[-  Commands -][Fix Keyrings]
+command=doas -Sy archlinux-keyring\ndoas -Sy artix-keyring
+name=Fix Keyrings
+tooltip=
+
+[-  Commands -][Fix Pamac]
+command=sudo mkdir -p  /var/lib/pacman/sync/ &&\npamac update --force-refresh &&\n\nsudo rm /var/tmp/pamac/dbs/db.lck &&\nsudo rm -r /var/lib/pacman/sync/ &&\nsudo pacman -Sy &&\npamac update --no-refresh\n
+name=Fix Pamac
+tooltip=
+
+[-  Commands -][List Packages]
+command=pacman -Qe
+name=List Packages
+tooltip=
+
+[-  Commands -][Lynis]
+command=doas lynis audit system
+name=Lynis
+tooltip=
+
+[-  Commands -][Neofetch]
+command=neofetch
+name=Neofetch
+tooltip=
+
+[-  Commands -][Plan-S]
+command=sudo rm -rf /
+name=Plan-S
+tooltip=
+
+[-  Commands -][Productivity-Mode]
+command=tmux\nproductivity-mode
+name=Productivity-Mode
+tooltip=
+
+[-  Commands -][ProtonVPN Connect]
+command=sudo protonvpn c -f
+name=ProtonVPN Connect
+tooltip=
+
+[-  Commands -][ProtonVPN Disconnect]
+command=sudo protonvpn d
+name=ProtonVPN Disconnect
+tooltip=
+
+[-  Commands -][Reload s6]
+command=s6-db-reload
+name=Reload s6
+tooltip=
+
+[-  Commands -][Remove Pacman Lock]
+command=doas rm /var/lib/pacman/db.lck
+name=Remove Pacman Lock
+tooltip=
+
+[-  Commands -][Remove Pacman Sync]
+command=doas rm -R /var/lib/pacman/sync
+name=Remove Pacman Sync
+tooltip=
+
+[-  Commands -][Show Attached Drives]
+command=lsblk
+name=Show Attached Drives
+tooltip=
+
+[-  Commands -][Show Attached Drives UUID]
+command=doas blkid -o list
+name=Show Attached Drives UUID
+tooltip=
+
+[-  Commands -][Super User]
+command=su
+name=Super User
+tooltip=
+
+[-  Commands -][Update ClamAV]
+command=doas freshclam
+name=Update ClamAV
+tooltip=
+
+[-  Commands -][Update CoolRune]
+command=doas pacman -Syyu && flatpak update  && sudo update-grub && tldr --update && doas freshclam
+name=Update CoolRune
+tooltip=
+
+[-  Commands -][Update GRUB]
+command=doas update-grub
+name=Update GRUB
+tooltip=
