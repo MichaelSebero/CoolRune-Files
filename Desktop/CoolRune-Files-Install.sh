@@ -8,3 +8,4 @@ sudo mv /home/$USER/Desktop/CoolRune-Files/usr /
 sudo rm /home/$USER/Desktop/CoolRune-Files/CoolRune-Files
 sudo update-grub 
 s6-db-reload
+sudo reboot
