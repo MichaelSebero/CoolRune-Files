@@ -1,0 +1,17 @@
+[io/github/celluloid-player/celluloid]
+settings-migrated=true
+csd-enable=false
+
+always-show-title-buttons=false
+draggable-video-area-enable=true
+
+autofit-enable=false
+
+[io/github/celluloid-player/celluloid/window-state]
+loop-playlist=false
+maximized=false
+volume=0.93999999999999995
+show-playlist=false
+width=424
+height=767
+playlist-width=250
