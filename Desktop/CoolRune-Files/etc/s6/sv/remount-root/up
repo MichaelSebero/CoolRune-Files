@@ -1,3 +1,0 @@
-#!/bin/execlineb -P
-foreground { mount -o remount,rw / }
-foreground { sh /etc/s6/log-service-reload.sh }

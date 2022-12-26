@@ -1,4 +1,0 @@
-#!/bin/execlineb -P
-envfile /etc/s6/config/mount-tmpfs.conf
-importas -uD "yes" MOUNT MOUNT
-foreground { if -t { test ${MOUNT} = "yes" } mount -t tmpfs tmpfs /tmp }

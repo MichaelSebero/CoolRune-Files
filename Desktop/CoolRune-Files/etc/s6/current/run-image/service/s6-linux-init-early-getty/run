@@ -1,3 +1,0 @@
-#!/usr/bin/execlineb -P
-
-/usr/bin/agetty -L -8 tty7 115200

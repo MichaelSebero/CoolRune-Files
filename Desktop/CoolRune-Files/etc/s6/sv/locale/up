@@ -1,2 +1,0 @@
-#!/bin/execlineb -P
-exec sh /etc/profile.d/locale.sh

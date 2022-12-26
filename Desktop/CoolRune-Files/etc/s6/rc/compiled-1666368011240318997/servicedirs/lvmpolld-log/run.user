@@ -1,9 +1,0 @@
-#!/bin/execlineb -P
-envfile /etc/s6/config/lvm2.conf
-importas -sCuD "n3 s2000000 T" LVMPOLLD_DIRECTIVES LVMPOLLD_DIRECTIVES
-ifelse { test -w /var/log } {
-	foreground { install -d -o s6log -g s6log /var/log/lvmpolld }
-	s6-setuidgid s6log exec -c s6-log -d3 -b -- ${LVMPOLLD_DIRECTIVES} /var/log/lvmpolld
-}
-foreground { install -d -o s6log -g s6log /run/log/lvmpolld }
-s6-setuidgid s6log exec -c s6-log -d3 -b -- ${LVMPOLLD_DIRECTIVES} /run/log/lvmpolld
