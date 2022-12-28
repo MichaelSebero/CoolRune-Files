@@ -7,4 +7,5 @@
 
 # alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
+shopt -s cdable_vars
 alias CoolRune-Files="cd /home/CoolRune-Files"
